@@ -18,7 +18,7 @@ echo "Drop keyspace ${keyspace}"
 cqlsh $(hostname --ip-address) -e "drop keyspace \"${keyspace}\";"
 
 echo "Create empty keyspace: ${keyspace}"
-cat "${bkp_name}/${keyspace}.sql" | cqlsh
+cat "${bkp_name}/${keyspace}.sql" | cqlsh $(hostname --ip-address)
 
 for dir in "${bkp_name}/${keyspace}/"*; do
     sstableloader -d $(hostname --ip-address) "${dir}"
