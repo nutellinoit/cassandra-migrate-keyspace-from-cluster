@@ -2,7 +2,7 @@
 
 keyspace=$1
 bkp_name="bkp-$$"
-data_dir="/var/lib/cassandra/data/"
+data_dir=$2
 
 if [ -z "${keyspace}" ]; then
     echo "Usage export.sh [keyspace]"

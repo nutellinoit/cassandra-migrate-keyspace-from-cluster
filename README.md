@@ -22,7 +22,7 @@ Create an export
 The export script `export.sh` is doing all that, just run it like that on one of the Cassandra cluster node :
 
 ```bash
-$ ./export.sh <keyspace name>
+$ ./export.sh <keyspace name> <data dir>
 
 ``` 
 
@@ -42,7 +42,7 @@ Now you need to import data to do so, you have to :
 That what the `import.sh` script is doing from the previous generated tar file.
 
 ```bash
-$ ./import.sh <keypsace backup tar file>
+$ ./import.sh <keyspace backup tar file>
 
 ```
 
