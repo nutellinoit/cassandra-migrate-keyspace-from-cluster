@@ -23,7 +23,7 @@ echo "Remove snapshot named: ${bkp_name}"
 nodetool clearsnapshot -t "${bkp_name}" "${keyspace}"
 
 echo "Dump keyspace and table creation instruction"
-cqlsh -e "desc \"${keyspace}\";" > "${bkp_name}/${keyspace}.sql"
+cqlsh $(hostname --ip-address) -e "desc \"${keyspace}\";" > "${bkp_name}/${keyspace}.sql"
 
 echo "Create tar file: ${keyspace}.tar.gz"
 cd "${bkp_name}"

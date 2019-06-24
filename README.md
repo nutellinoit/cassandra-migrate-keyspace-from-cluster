@@ -26,6 +26,12 @@ $ ./export.sh <keyspace name> <data dir>
 
 ``` 
 
+eg: 
+
+```bash
+$ ./export.sh mooncake /data/cassandra/data/
+```
+
 You can have a list of your keyspace with `desccribe keyspaces`
 
 Transfer the tar file to one of the node of the new cluster.
